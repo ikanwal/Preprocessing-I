@@ -1,1 +1,335 @@
-/* Compile your LESS file! */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/* Set every element's box-sizing to border-box */
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+}
+:root {
+  --primary-color: whitesmoke;
+  --secondary-color: lightgrey;
+  --max-width: 1440px;
+}
+.container {
+  width: 100vw;
+  height: auto;
+  margin: 1px;
+  padding: 1px;
+  background: rgba(66, 4, 53, 0.849);
+}
+.nav-bar {
+  display: grid;
+  grid-column: 0.25;
+  grid-row: 0.5;
+}
+.nav-bar nav {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: space-evenly;
+  align-content: left;
+}
+.nav-bar nav a {
+  display: flex;
+  justify-content: space-evenly;
+  align-content: left;
+  color: whitesmoke;
+  text-decoration: none;
+}
+.nav-bar nav a:hover {
+  color: gray;
+}
+.header-container {
+  display: grid;
+  grid-column: 0.66666667;
+  grid-row: 0.5;
+  margin-top: 2rem;
+}
+.header-container h1 {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  font: 180% bold;
+  color: #fff;
+}
+.header-container h2 {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  font: 120% bold;
+  color: #fff;
+}
+.contact {
+  display: grid;
+  grid-column: 0.66666667;
+  grid-row: 0.8;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: row;
+}
+.contact a {
+  text-decoration: none;
+  margin: 20px;
+  color: whitesmoke;
+}
+.contact a:hover {
+  color: gray;
+}
+#timeline {
+  display: grid;
+  grid-column: 0.25;
+  grid-row: 0.55555556;
+  /* Create Line */
+}
+#timeline ul {
+  padding: 50px 0;
+  background: var(--primary-color);
+}
+#timeline ul li {
+  position: relative;
+  width: 6px;
+  padding-top: 50px;
+  margin: 0 auto;
+  background: rgba(66, 4, 53, 0.849);
+  list-style: none;
+}
+#timeline ul div {
+  position: relative;
+  bottom: 0;
+  width: 600px;
+  height: 200px;
+  padding: 1rem;
+  background: rgba(66, 4, 53, 0.849);
+  border-radius: 1rem;
+  transition: all 0.5s ease-in-out;
+  color: whitesmoke;
+}
+#timeline ul div h3 {
+  display: flex;
+  justify-content: flex-start;
+  align-content: center;
+  margin-bottom: 1em;
+}
+table tbody tr {
+  display: flex;
+  justify-content: space-around;
+  align-content: center;
+  margin-right: 2rem;
+  text-align: center;
+}
+table tbody tr .col-3 {
+  text-align: center;
+  margin-left: auto;
+}
+table tbody tr .col-2 {
+  text-align: center;
+  margin-right: 2rem;
+}
+table tbody tr .col-1 {
+  text-align: center;
+  margin-right: 2rem;
+}
+#timeline ul li:nth-child(odd) div {
+  left: 40px;
+  transform: translate(200px, 0);
+}
+#timeline ul li:nth-child(even) div {
+  left: -650px;
+  transform: translate(-200px, 0);
+}
+#timeline ul li:after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  width: 25px;
+  height: 25px;
+  background: inherit;
+  border-radius: 50%;
+  transform: translateX(-50%);
+  transition: background 0.5s ease-in-out;
+}
+/* Arrows Base */
+#timeline div:before {
+  content: '';
+  position: absolute;
+  bottom: 5px;
+  width: 0;
+  height: 0;
+  border-style: solid;
+}
+/* Right Side Arrows */
+#timeline ul li:nth-child(odd) div:before {
+  left: -15px;
+  border-width: 8px 16px 8px 0;
+  border-color: transparent var(--secondary-color) transparent transparent;
+}
+/* Left Side Arrows */
+#timeline ul li:nth-child(even) div:before {
+  right: -15px;
+  border-width: 8px 16px 8px 0;
+  border-width: 8px 0px 8px 16px;
+  border-color: transparent transparent transparent var(--secondary-color);
+}
+/* Show Boxes */
+#timeline ul li.show div {
+  transform: none;
+  visibility: visible;
+  opacity: 4;
+}
+#timeline ul li.show:after {
+  background: var(--secondary-color);
+}
+@media (max-width: 900px) {
+  #timeline ul li div {
+    width: 250px;
+  }
+  #timeline ul li:nth-child(even) div {
+    left: -284px;
+  }
+}
+@media (max-width: 600px) {
+  #timeline ul li {
+    margin-left: 20px;
+  }
+  #timeline ul li div {
+    width: calc(100vw - 90px);
+  }
+  #timeline ul li:nth-child(even) div {
+    left: 40px;
+  }
+  #timeline ul li:nth-child(even) div:before {
+    left: -15px;
+    border-width: 8px 16px 8px 0;
+    border-color: transparent var(--secondary-color) transparent transparent;
+  }
+}
