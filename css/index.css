@@ -246,19 +246,17 @@ table tbody tr {
   margin-right: 2rem;
   text-align: center;
 }
-
 table tbody tr .col-3 {
-  text-align: left;
+  text-align: center;
   margin-left: auto;
 }
 table tbody tr .col-2 {
-  text-align: left;
+  text-align: center;
   margin-right: 2rem;
 }
 table tbody tr .col-1 {
-  text-align: left;
+  text-align: center;
   margin-right: 2rem;
-  width:80px;
 }
 #timeline ul li:nth-child(odd) div {
   left: 40px;
@@ -319,7 +317,11 @@ table tbody tr .col-1 {
     left: -284px;
   }
 }
-@media (max-width: 600px) {
+@media (max-width: 500px) {
+  .container {
+    width: 100%;
+    margin: auto;
+  }
   #timeline ul li {
     margin-left: 20px;
   }
