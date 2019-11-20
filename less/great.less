@@ -1,0 +1,221 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* Set every element's box-sizing to border-box */
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    font-family: 'Titillium Web', sans-serif;
+}
+
+h1, h2, h3, h4, h5 {
+    font-family: 'Bangers', cursive;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+}
+
+.display-flex(@justify-content,@align-items){
+    display: flex;
+    justify-content:@justify-content ;
+    align-items: @align-items;
+}
+@background-container:linear-gradient(105deg, lightgray 60%,#b92b27 60%);
+
+.container{
+    width:100%;
+	margin:auto;
+	background:@background-container;
+}
+
+.nav_bar{
+    .display-flex(space-around, center);
+    flex-direction: row;
+    border:solid 1px grey;
+    position: fixed;
+	top: 0;
+	width:100%;
+    background: linear-gradient(to right,#b92b27,darkgray); 
+    
+    a{
+        text-decoration: none;
+        color:darkgray;
+        &:hover{
+            color:black;
+        }
+    }
+    .current{
+        color:black;
+    }
+}
+.header-container{
+    .display-flex(space-around,center);
+    padding-top:20px;
+    margin:30px;
+
+     .header h1,button{
+      display: flex;
+      flex-wrap: wrap;
+     }
+ }
+
+ .header{
+
+     h1{
+        font-size:50pt;
+        padding-top:20px;
+        align-items: baseline;
+        
+     }
+     button{
+        width: 50%;
+        height: 10%; 
+
+        a{
+            text-decoration:none;
+            text-align:center;
+            padding-left:20px;
+            color:black;
+        }
+        &:hover{
+            background:lightslategray;
+            color:white;
+            transform: scale(1.2);
+            border-left:2px;
+            border-color:gray;
+        }
+     }
+    
+ }
+
+ .introimg{
+	margin-top:30px 0 10px 30px;
+}
+
+.top-content{
+	border-top:dotted 2px black;
+	display: flex;
+    padding-top:20px;
+    .child1{
+        margin:20px 30px 20px 30px;
+    }
+    .features{
+        margin-right: 50px;
+    }
+	
+}
+/* middle-img */
+.middle-img{
+	padding-top:10px;
+	width:100%;
+    height: 150px;
+    margin: auto;	
+}
+
+/* bottom-content */
+.bottom-content3{
+    display: flex;
+    border-bottom:dotted 2px black;
+    .child2{
+        padding-bottom:10px;
+        margin:20px 30px 20px 30px;
+    }
+
+ }
+ /* contact */
+.contact{
+	margin:0 0 0 30px;
+		
+}
+/* footer */
+footer{
+	margin-top:20px;
+	text-align: center;
+}
+@media(max-width:800px){
+    .container {
+        width:100vw;
+    }
+    
+    
+     .nav_bar{
+         width:100%;
+         .display-flex(start-flex, center);
+     }
+    
+     .header-container{
+         display: flex;
+         flex-flow: column wrap;
+         width:auto;
+         height:fit-content;
+     
+    
+         button{
+         width:auto;
+         left:0;
+         }
+
+    }
+    
+     .introimg{
+         width: auto;
+         height: auto;
+     }
+    
+    }
+    
+    @media(max-width:500px){
+    .container{
+        background: whitesmoke;
+        width: 100vw;
+    }
+    }
+
