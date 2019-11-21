@@ -189,24 +189,36 @@ html, body {
 
   table{
 	 tbody{
-		 tr{
-			 .display-flex(space-around,center) ;
-			 margin-right: 2rem;
-			 text-align: center;
-			.col-3{
-				 text-align: center;
-				 margin-left: auto;
-			}
-			.col-2{
-				text-align: center;
-				margin-right:2rem;
-			}
-			.col-1{
-				text-align: center;
-				margin-right:2rem;
-			}
-		 }
 
+		font-size: medium;
+	 
+		 .row-h{
+			 
+			 line-height:1;
+			 border-bottom: 1px solid lightgray;
+			}
+		 .row-1{
+			 line-height: 1;
+			 border-bottom: 1px solid lightgray;
+		 }
+		 .row-2{
+			line-height: 1;
+			border-bottom: 1px solid lightgray;
+		 }
+		.row-3{
+			line-height: 1;
+			border-bottom: 1px solid lightgray;
+		}
+		.col-1{
+			width:45%;
+		}
+		.col-2{
+			width:45%;
+		}
+		.col-3{
+			width:45%;
+		}
+	  
 	 }
   }
 
@@ -244,7 +256,7 @@ content: '';
   #timeline ul li:nth-child(odd) div:before {
 	left: -15px;
 	border-width: 8px 16px 8px 0;
-	border-color: transparent var(--secondary-color) transparent transparent;
+	border-color: transparent var(--secondary-color);
   }
   
   /* Left Side Arrows */
@@ -252,7 +264,7 @@ content: '';
 	right: -15px;
 	border-width: 8px 16px 8px 0;
 	border-width: 8px 0px 8px 16px;
-	border-color: transparent transparent transparent var(--secondary-color);
+	border-color: transparent  var(--secondary-color);
   }
   
   /* Show Boxes */
