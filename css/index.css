@@ -242,6 +242,11 @@ body {
 table tbody {
   font-size: medium;
 }
+@media (max-width: 500px) {
+  table tbody {
+    font-size: 0.85rem;
+  }
+}
 table tbody .row-h {
   line-height: 1;
   border-bottom: 1px solid lightgray;
@@ -344,5 +349,100 @@ table tbody .col-3 {
     left: -15px;
     border-width: 8px 16px 8px 0;
     border-color: transparent var(--secondary-color) transparent transparent;
+  }
+}
+.wrapper {
+  background: white;
+  width: 100%;
+  margin-top: 3rem  ;
+}
+.wrapper section {
+  background: white;
+  border-bottom: solid 2px purple;
+  display: flex;
+  justify-content: flex-start;
+  align-content: center;
+}
+.wrapper section img {
+  width: 20%;
+  border-radius: 1rem;
+}
+@media (max-width: 500px) {
+  .wrapper section img {
+    width: 50%;
+  }
+}
+.wrapper section .content {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  border-width: 100%;
+}
+.inner {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
+  margin-left: 3rem;
+  line-height: 2;
+}
+.inner h2 {
+  font-size: 2.2rem;
+}
+.inner p {
+  font-size: 1.1rem;
+}
+.inner div a {
+  text-decoration: none;
+  color: white;
+}
+.inner div .button {
+  height: 20px;
+  letter-spacing: 1 rem;
+  line-height: 4rem;
+  outline: 0;
+  padding: 1rem;
+  border: solid 2px !important;
+  border-color: rgba(66, 4, 53, 0.849) !important;
+  border-radius: 1rem;
+  margin-right: 30px;
+  background: rgba(66, 4, 53, 0.849);
+}
+@media (max-width: 325px) {
+  .inner {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+    margin-left: 1rem;
+    line-height: 1;
+  }
+  .inner h2 {
+    font-size: 2rem;
+  }
+  .inner p {
+    font-size: 1rem;
+  }
+  .actions {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    box-sizing: border-box;
+  }
+  .actions a {
+    color: white;
+    font-size: small;
+  }
+  .actions .button {
+    letter-spacing: 0;
+    height: 20px;
+    line-height: 2rem;
+    outline: 0;
+    padding: 1rem;
+    border: solid 2px !important;
+    border-color: rgba(66, 4, 53, 0.849) !important;
+    border-radius: 1rem;
+    margin-right: 10px;
+    background: rgba(66, 4, 53, 0.849);
   }
 }
